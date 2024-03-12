@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journalist Kiiled</title>
+    <script src='https://d3js.org/d3.v7.min.js'></script>
+    <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js">
+    </script>
+
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+
+    <link rel="stylesheet" href="style/global.css" />
+
+</head>
+
+<body>
+
+    <body>
+        <div id="cover-container" class="active-container">
+            <div id="background-title" class="title-cover">Journalist Killed</div>
+            <div id="nameDisplay"></div>
+        </div>
+        <div id="container">
+            <div id="linechart-container">
+                <div id="linechart"></div>
+                <div class="description">
+                    <div class="des-title">
+                        Yearly Trends of <br>Journalist Fatalities <br>Across Countries
+                    </div>
+                    <div class="des-subtitle">Peaks vs. Persistent Threats</div>
+                    <div class="text">The annual trends in journalist fatalities across countries reveal distinct
+                        patterns over time, vividly depicted by the line chart, which underscores stark differences in
+                        the dynamics of journalist deaths. Two overarching patterns emerge. Firstly, there are
+                        noticeable peaks in conflict zones, exemplified by countries like Syria, Ukraine, Israel, and
+                        Gaza, experiencing striking spikes in journalist fatalities during specific years. These peaks
+                        are often linked to periods of heightened conflict or war, exposing journalists to increased
+                        risks as they report on the frontlines. The chart visually emphasizes the intensity and sporadic
+                        nature of these incidents. Conversely, regions such as Mexico, the Philippines, Iraq, and
+                        Colombia depict a more constant trend of journalist fatalities. The consistent line trajectory
+                        signifies an ongoing and pervasive threat faced by journalists in these areas, highlighting the
+                        challenges they confront in environments characterized by long-standing issues.
+                    </div>
+                </div>
+            </div>
+
+            <div id="sankey-container">
+                <div id="sankey"></div>
+                <div class="description">
+                    <div class="des-title">Diving into <br>the Context of <br>Journalist Fatalities</div>
+                    <div class="des-subtitle">Murder as the Dominant Cause</div>
+                    <div class="text">Diving into the Context of Journalist Fatalities reveals a stark reality depicted
+                        by the Sankey
+                        diagram, where the cause of death among journalists is strikingly skewed. Surprisingly, murders
+                        stand out as the primary threat, surpassing incidents of crossfire and all other factors
+                        combined.
+                        Within the category of murder, a nuanced examination reveals three main culprits: political
+                        groups,
+                        criminal organizations, and government officials. Unlike the relatively straightforward
+                        attribution
+                        of military officials in crossfire incidents, the murder category exposes a multifaceted
+                        landscape
+                        of danger, with political motives, criminal agendas, and governmental involvement emerging as
+                        prominent contributors. This nuanced analysis sheds light on the intricate web of risks faced by
+                        journalists, highlighting the need for a comprehensive understanding of the varied threats they
+                        encounter in the pursuit of truth.</div>
+                </div>
+            </div>
+
+            <div id="map-container">
+                <div id="map">
+                    <div id="slider-container">
+                        <input type="range" id="slider" min="2013" max="2023" step="1" value="2023" />
+                        <div class="year">2013</div>
+                    </div>
+                    <div id="map-legend">
+                        <div class="map-legend-title">Press Freedom Index</div>
+                        <div class="map-legend-item">
+                            <div class="map-legend-color" style="background-color: #ffffff"></div>
+                            <div class="map-legend-text">80 and above</div>
+                        </div>
+                        <div class="map-legend-item">
+                            <div class="map-legend-color" style="background-color: #fff8e8"></div>
+                            <div class="map-legend-text">70 - 80</div>
+                        </div>
+                        <div class="map-legend-item">
+                            <div class="map-legend-color" style="background-color: #fcd581"></div>
+                            <div class="map-legend-text">60 - 70</div>
+                        </div>
+                        <div class="map-legend-item">
+                            <div class="map-legend-color" style="background-color: #d52941"></div>
+                            <div class="map-legend-text">40 - 60</div>
+                        </div>
+                        <div class="map-legend-item">
+                            <div class="map-legend-color" style="background-color: #720026"></div>
+                            <div class="map-legend-text">0 - 40</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-description">
+                    <div class="map-des-title">Mapping Journalist Risk</div>
+                    <!-- <div class="map-des-subtitle">Journalist Killed vs Press Freedom Index</div> -->
+                    <div class="map-text">Explore the correlation between journalist fatalities and Press Freedom
+                        Index scores (2013-2023). Uncover patterns and trends, gaining insights into the consistent
+                        dangers faced by journalists in different countries. This interactive tool provides a
+                        user-friendly interface for a quick understanding of the complex relationship
+                        between press freedom and journalist safety worldwide."</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./js/sankey.js" type="module" async></script>
+        <script src="./js/linechart.js" type="module" async></script>
+        <script src="./js/worldmap.js" type="module" async></script>
+        <script src="./js/namewall.js" type="module" async></script>
+        <!-- <script src="scrolling.js"></script> -->
+
+        <!-- <script src="../scrollama.min.js"></script> -->
+
+
+
+    </body>
+
+</html>
