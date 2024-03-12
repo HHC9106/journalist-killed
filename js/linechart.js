@@ -106,7 +106,7 @@ function handleMouseOver(event, d) {
 
         tooltip.transition()
         .duration(200)
-        .style("opacity", 0.9);
+        .style("opacity", 0.7);
 
         tooltip.html(`
         <strong>${currentCountry}</strong>
@@ -125,7 +125,7 @@ function handleMouseOver(event, d) {
             
         tooltip.transition()
             .duration(200)
-            .style("opacity", 0.9);
+            .style("opacity", 0.7);
 
         tooltip.html(`
     <strong>${currentCountry}</strong>
@@ -144,7 +144,7 @@ function handleMouseOver(event, d) {
 
         tooltip.transition()
             .duration(200)
-            .style("opacity", .9)
+            .style("opacity", .7)
             .text(d.key)
             .style("left", (event.pageX) + "px")
             .style("top", (event.pageY - 28) + "px")
@@ -161,7 +161,7 @@ function handleMouseOver(event, d) {
 function handleMouseOut() {
     d3.select(this).transition()
         .duration(500)
-        .style("opacity", 0.9);
+        .style("opacity", 0.7);
 
     tooltip.transition()
         .duration(500)
