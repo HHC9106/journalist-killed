@@ -161,7 +161,7 @@ function handleMouseOver(event, d) {
 function handleMouseOut() {
     d3.select(this).transition()
         .duration(500)
-        .style("opacity", 0.4);
+        .style("opacity", 0.9);
 
     tooltip.transition()
         .duration(500)
